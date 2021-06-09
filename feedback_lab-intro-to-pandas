@@ -1,0 +1,62 @@
+Hi Giancarlo 🙋‍♂️ Here I send you some feedback of the lab-customer-analysis-round-2.
+
+3- Create a Pandas DataFrame from the list of lists below. Each sublist should be represented as a row.
+
+The exercise is perfect. You do not need to import DataFrame from pandas, as when doing the `import pandas as pd` at the beginning it is enough. 
+
+4- Rename the data frame columns based on the names in the list below.
+
+You approach is correct. Another way of naming the columns is the following:
+
+```python
+df1.columns = colnames
+```
+5- Create a subset of this data frame that contains only the Score 1, 3, and 5 columns.
+
+To create a subset of a dataset, you can also select the columns you want to include and store them in a new one:
+
+```python
+df_subset = df[["Score_1", "Score_3", "Score_5"]]
+```
+
+6- From the original dataframe, calculate the average, the median and the maximum Score_3 value. 
+
+You can also do it with a specific column:
+
+```python
+df1['Score_3'].mean()
+df1['Score_3'].median()
+df1['Score_3'].max()
+```
+
+Let's load another dataset for more exercises¶
+
+2- Show the shape of the DataFrames.
+
+The shape of the dataframe can be seen using `df1.shape`. This will show you the amount of rows and columns. 
+
+7- In a markdown cell, explain briefly the meaning of the columns. 
+
+The objective of this exercise was to get used to understand the info in the columns. For example, in customer we have an ID, in st a state from the USA, gender is categorized as M or F etc.
+
+11- Filter out the data for customers who have an income of 0 or less.
+
+Here you get the customers that do not have an 0.0 income. In this case it works, but if the data would allow entries lower than 0.0 you would include them in the dataframe. 
+
+Therefore, in this case it is advisbale to use `>` instead of `!=`. 
+
+You did a very good job in the lab, keep up the good work! 🚀  
+
+You will receive this correction as a pull request in the repository were you store it. 
+
+In the future, please clone the repository from the link we send with the Lab, and make a pull request after finishing. You can find the info on how to do it here:
+
+[Github basics](https://github.com/Ironhack-Data-0621-Remote/GitHub_Basics) 
+
+All the info and folders from class can be found here:
+
+[Github page with Classroom-Materials and Labs](https://github.com/Ironhack-Data-0621-Remote) 
+
+If you have any question, please let me know. 
+
+<img width=1000 src="pandas_meme.png">
