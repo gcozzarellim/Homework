@@ -1,0 +1,63 @@
+Hi Giancarlo 🙋‍♂️ Here I send you some feedback of the lab-customer-analysis-round-2.
+
+3- Which columns are numerical?
+
+Your approach with the numerical columns is correct, as it gives a list with the column names. If you would like to see the columns you can do it this way:
+
+```python
+data.select_dtypes(include=['int64', 'float'])
+```
+Regarding the categorical columns:
+
+```python
+data.select_dtypes('object').columns
+```
+5- Check and deal with NaN values.
+
+A trick to check the percentage of NaN values in a column is the following:
+
+```python
+data['vehicle_type'].isna().sum() / len(data['vehicle_type']) * 100
+```
+The same can be applied to the whole dataframe, if done without specifying the column. 
+
+You decided to use `median()` to replace the NaN values. This is one of the possible approaches. Others are to delete them, leave them like that or to use other metrics such as average, mean or mode.  
+
+Unfortunately there is no general rule about what to do with the NaN values, it always depends on the data and if the column stores essential information. 
+
+7- Put all the previously mentioned data transformations into a function.
+
+In this exercise you have to put all the code inside a function. 
+
+The structure of a function is the following:
+
+```python
+def <name of the function>(<parameter(s)>):
+    code
+    return <the result we want to get>
+```
+
+In this case the parameter would be the dataframe. Please, note that you can write anything as a parameter, not necessarily the name of what you are going to transform (here, data). 
+
+The parameter and all the variables you may include are only applied inside the function, outside they do not exist. 
+
+Here I send you some documentation about the functions. 
+
+[W3 school - functions documentation](https://www.w3schools.com/python/python_functions.asp) = https://www.w3schools.com/python/python_functions.asp
+[Real Python - function documentation](https://realpython.com/python-return-statement/#:~:text=The%20Python%20return%20statement%20is%20a%20special%20statement%20that%20you,can%20be%20any%20Python%20object.) = https://realpython.com/python-return-statement/#:~:text=The%20Python%20return%20statement%20is%20a%20special%20statement%20that%20you,can%20be%20any%20Python%20object.
+
+If you have any other question regarding the functions, please let me know. 
+
+Lab-customer-analysis-round-3
+
+1- Show DataFrame info
+
+In this case, to see the info of the dataframe you need to use the `df.info()` command. 
+
+You did a very good work in the labs. You got the main concepts that were discussed in the class and found ways of answering the questions. As always, we encourage you to try to do the bonus. 
+
+If you have any question, please let me know. 
+
+Keep up the good work! 🚀 
+
+<img width=500 src="pandas_meme1.png">
